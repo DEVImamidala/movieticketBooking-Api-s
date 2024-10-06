@@ -1,0 +1,15 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../controller/userController');
+router.post('/register',userController.register);
+router.post('/login',userController.login);
+router.get('/:id',userController.id);
+router.get('/languages/:languages',userController.languages);
+router.get('/languages/:languages/:genres',userController.genres);
+router.get('/movies/:movies',userController.moviename);
+router.get('/hello/:shows',userController.shows);
+router.post('/theatres',userController.theatres);
+router.post('/showid',userController.screen);
+router.get('/shows/showid',userController.showtype);
+router.get('/shows/showid/seatsselection',userController.seatsselection);
+module.exports =  router;
